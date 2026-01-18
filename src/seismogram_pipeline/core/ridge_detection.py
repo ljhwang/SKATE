@@ -18,7 +18,7 @@ from .debug import Debug, pad
 import numpy as np
 from math import log
 from scipy import ndimage
-from scipy.ndimage.filters import gaussian_filter1d, gaussian_laplace
+from scipy.ndimage import gaussian_filter1d, gaussian_laplace
 from skimage.feature import peak_local_max
 from skimage.filters import threshold_otsu
 from skimage.morphology import remove_small_objects
@@ -201,7 +201,7 @@ def peak_local_max2(image, min_distance=1, threshold_abs=None,
     array([[10, 10, 10]])
 
     """
-    if type(exclude_border) == bool:
+    if isinstance(exclude_border, bool):
         exclude_border = min_distance if exclude_border else 0
 
     out = np.zeros_like(image, dtype=bool)
