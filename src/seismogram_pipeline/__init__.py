@@ -2,6 +2,8 @@
 Skates 3 : Python 3 version of skates
 """
 
+__version__ = "1.0.0"
+
 # Import main functions for easy access
 from .core.roi_detection import get_roi, corners_to_geojson
 from .core.meanline_detection import detect_meanlines, meanlines_to_geojson

@@ -7,8 +7,7 @@ import cv2
 from skimage.filters import threshold_otsu
 from skimage.morphology import disk
 from skimage.segmentation import find_boundaries
-from scipy.ndimage.measurements import label
-
+from scipy.ndimage import label
 from skimage.transform import hough_line, hough_line_peaks, probabilistic_hough_line
 import skimage.draw as skidraw
 from skimage.color import gray2rgb
